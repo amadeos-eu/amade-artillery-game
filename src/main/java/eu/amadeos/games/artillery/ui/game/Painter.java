@@ -39,12 +39,17 @@ final class Painter {
     /** {@code aim} is where a person drags the mouse to aim, or {@code null}. */
     void paint(Graphics2D g, Battle battle, Effects effects, double alpha, Point2D aim) {
         AffineTransform saved = g.getTransform();
+        backdrop.draw(g, battle.theme());               // the far sky stays still when the ground shakes
         double shake = effects.shake();
         if (shake > 0) {
             SeededRandom r = new SeededRandom((long) (effects.time() * 60));
             g.translate((r.nextDouble() - 0.5) * shake, (r.nextDouble() - 0.5) * shake);
+            // A little larger, so the shaken ground still reaches the edges of the field.
+            double grow = 1 + shake / Field.HEIGHT;
+            g.translate(Field.WIDTH / 2, Field.HEIGHT / 2);
+            g.scale(grow, grow);
+            g.translate(-Field.WIDTH / 2, -Field.HEIGHT / 2);
         }
-        backdrop.draw(g, battle.theme());
         ground.paint(g, battle.ground(), battle.theme());
         g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         Tank current = battle.current();
