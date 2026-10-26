@@ -131,7 +131,16 @@ public final class Battle {
         double[] places = new double[n];
         for (int i = 0; i < n; i++) {
             places[i] = 20 + slot * i + slot * (0.25 + random.nextDouble() * 0.5);
-            Landscape.flatten(line, (int) Math.round(places[i] / spacing), 3);
+            int centre = (int) Math.round(places[i] / spacing);
+            Landscape.flatten(line, centre, 3);
+            // A gentler slope from the shelf to the land on each side.
+            for (int side = -1; side <= 1; side += 2) {
+                int edge = centre + side * 4, beyond = centre + side * 6;
+                if (beyond >= 0 && beyond < samples) {
+                    line[edge] = line[centre] * 2 / 3 + line[beyond] / 3;
+                    line[centre + side * 5] = line[centre] / 3 + line[beyond] * 2 / 3;
+                }
+            }
         }
         Ground ground = new Ground(Field.WIDTH, Field.HEIGHT, Field.CELL);
         ground.fill(Landscape.sample(line, spacing), (x, depth) -> depth < Earth.TOP_DEPTH ? Earth.TOP : Earth.SOIL);
