@@ -61,8 +61,8 @@
     <category>StrategyGame</category>
   </categories>
 
-  <url type="homepage">https://github.com/datazuul/amade-artillery-game</url>
-  <url type="bugtracker">https://github.com/datazuul/amade-artillery-game/issues</url>
+  <url type="homepage">https://github.com/amadeos-eu/amade-artillery-game</url>
+  <url type="bugtracker">https://github.com/amadeos-eu/amade-artillery-game/issues</url>
   <developer id="eu.amadeos">
     <name>amadeOS Project</name>
   </developer>
@@ -74,7 +74,7 @@
       <caption xml:lang="fr">Un duel dans la vallée alpine au coucher du soleil</caption>
       <caption xml:lang="es">Un duelo en el valle alpino al atardecer</caption>
       <caption xml:lang="it">Un duello nella valle alpina al tramonto</caption>
-      <image>https://raw.githubusercontent.com/datazuul/amade-artillery-game/main/docs/screenshots/amade-artillery-game.png</image>
+      <image>https://raw.githubusercontent.com/amadeos-eu/amade-artillery-game/main/docs/screenshots/amade-artillery-game.png</image>
     </screenshot>
   </screenshots>
 

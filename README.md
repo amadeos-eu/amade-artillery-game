@@ -1,6 +1,6 @@
 # amade-artillery-game
 
-**amade-artillery-game** is the artillery duel of the [amadeOS](https://github.com/datazuul/amadeos) desktop: two to four tanks stand on a landscape of hills and valleys and take turns. Set the barrel's angle and the shot's power, mind the wind, and fire. Every hit blasts a crater out of the ground, earth without support falls down, and a tank whose ground is shot away falls with it. People and computers of three levels play in any mix at one screen. Built on [amade-game-engine](https://github.com/datazuul/amade-game-engine); runs on other operating systems as well.
+**amade-artillery-game** is the artillery duel of the [amadeOS](https://github.com/amadeos-eu/amadeos) desktop: two to four tanks stand on a landscape of hills and valleys and take turns. Set the barrel's angle and the shot's power, mind the wind, and fire. Every hit blasts a crater out of the ground, earth without support falls down, and a tank whose ground is shot away falls with it. People and computers of three levels play in any mix at one screen. Built on [amade-game-engine](https://github.com/amadeos-eu/amade-game-engine); runs on other operating systems as well.
 
 ![License](https://img.shields.io/badge/license-EUPL--1.2-blue)
 ![Java](https://img.shields.io/badge/Java-25-orange)
